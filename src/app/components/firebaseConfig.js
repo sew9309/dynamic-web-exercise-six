@@ -1,5 +1,8 @@
+import firebase from "firebase/compat/app";
+import "firebase/auth"
+
 const firebaseConfig = {
-    apiKey: `${process.env.FIREBASE_API_KEY}`,
+    apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
     authDomain: "exercise-six-2023-sofiaw.firebaseapp.com",
     projectId: "exercise-six-2023-sofiaw",
     storageBucket: "exercise-six-2023-sofiaw.appspot.com",
@@ -8,4 +11,5 @@ const firebaseConfig = {
     measurementId: "G-LB411GZFFG"
   };
 
+  export const auth = firebaseConfig.auth;
   export default firebaseConfig;
